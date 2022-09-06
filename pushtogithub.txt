@@ -1,0 +1,311 @@
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ mkdir test
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ touch index.html
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ touch style.css
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ l
+bash: l: command not found
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ ls
+A-X-S-O-S/  Telegram.lnk*  desktop.ini  index.html  style.css  test/
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ mv style.css test/
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ ls
+A-X-S-O-S/  Telegram.lnk*  desktop.ini  index.html  test/
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ mv index.html test/
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ ls
+A-X-S-O-S/  Telegram.lnk*  desktop.ini  test/
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop
+$ cd test
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test
+$ touch style.css
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test
+$ touch index.html
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test
+$ git init
+Initialized empty Git repository in C:/Users/user/Desktop/test/.git/
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git commit -m "first commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git remote -v
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git remote add origin https://github.com/Baraa-asal/test.git
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git remote -v
+origin  https://github.com/Baraa-asal/test.git (fetch)
+origin  https://github.com/Baraa-asal/test.git (push)
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Baraa-asal/test.git'
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git add .
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   style.css
+
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git commit -m "initial commit"
+[master (root-commit) 237e1a9] initial commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ create mode 100644 style.css
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 225 bytes | 225.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Baraa-asal/test.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ code .
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ commit -m "update html"
+bash: commit: command not found
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git commit -m "update html"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+        modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ ^C
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git commit -m "update css"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+        modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git log
+commit 12fa474078a8552b33d16d9c1cd5f1f14b8d9d5f (HEAD -> master, origin/master)
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:45:55 2022 +0300
+
+    commit asgmt
+
+commit 237e1a9d9ca22313f8210fbbc4c09248608894a1
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:44:00 2022 +0300
+
+    initial commit
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git add .
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git commit -m "update html and css"
+[master f9e7f23] update html and css
+ 2 files changed, 5 insertions(+)
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git log
+commit f9e7f23133fa864c54c3b4f0d644c9b9eab187fa (HEAD -> master)
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:57:47 2022 +0300
+
+    update html and css
+
+commit 12fa474078a8552b33d16d9c1cd5f1f14b8d9d5f (origin/master)
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:45:55 2022 +0300
+
+    commit asgmt
+
+commit 237e1a9d9ca22313f8210fbbc4c09248608894a1
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:44:00 2022 +0300
+
+    initial commit
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git revert f9e7f23133fa864c54c3b4f0d644c9b9eab187fa
+[master 371aae7] Revert "update html and css"
+ 2 files changed, 5 deletions(-)
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git log
+commit 371aae7d217cf79eacce5dec38707af8601bd74e (HEAD -> master)
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:58:34 2022 +0300
+
+    Revert "update html and css"
+
+    This reverts commit f9e7f23133fa864c54c3b4f0d644c9b9eab187fa.
+
+commit f9e7f23133fa864c54c3b4f0d644c9b9eab187fa
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:57:47 2022 +0300
+
+    update html and css
+
+commit 12fa474078a8552b33d16d9c1cd5f1f14b8d9d5f (origin/master)
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:45:55 2022 +0300
+
+    commit asgmt
+
+commit 237e1a9d9ca22313f8210fbbc4c09248608894a1
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:44:00 2022 +0300
+
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git commit -m "last commit"
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+user@DESKTOP-GQ6MCC8 MINGW64 ~/Desktop/test (master)
+$ git log
+commit 371aae7d217cf79eacce5dec38707af8601bd74e (HEAD -> master)
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:58:34 2022 +0300
+
+    Revert "update html and css"
+
+    This reverts commit f9e7f23133fa864c54c3b4f0d644c9b9eab187fa.
+
+commit f9e7f23133fa864c54c3b4f0d644c9b9eab187fa
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:57:47 2022 +0300
+
+    update html and css
+
+commit 12fa474078a8552b33d16d9c1cd5f1f14b8d9d5f (origin/master)
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:45:55 2022 +0300
+
+    commit asgmt
+
+commit 237e1a9d9ca22313f8210fbbc4c09248608894a1
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:44:00 2022 +0300
+:...skipping...
+commit 371aae7d217cf79eacce5dec38707af8601bd74e (HEAD -> master)
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:58:34 2022 +0300
+
+    Revert "update html and css"
+
+    This reverts commit f9e7f23133fa864c54c3b4f0d644c9b9eab187fa.
+
+commit f9e7f23133fa864c54c3b4f0d644c9b9eab187fa
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:57:47 2022 +0300
+
+    update html and css
+
+commit 12fa474078a8552b33d16d9c1cd5f1f14b8d9d5f (origin/master)
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:45:55 2022 +0300
+
+    commit asgmt
+
+commit 237e1a9d9ca22313f8210fbbc4c09248608894a1
+Author: baraa-asal <b.aboasal@gmail.com>
+Date:   Mon Sep 5 15:44:00 2022 +0300
+
+    initial commit
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
